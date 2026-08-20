@@ -4,12 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Portal</title>
-  <meta http-equiv="refresh" content="0; url=admin.html">
 </head>
 <body>
-  <p>Opening Admin Portal...</p>
+  <p>Opening...</p>
   <script>
-    window.location.replace('admin.html');
+    const customerSite = 'https://ajaykrish0105.github.io/editing-webpage/#hero';
+    const adminPage = 'admin.html';
+
+    // The Admin page's "View Public Website" button points here.
+    // Direct visits to /admin-web/ still open the admin login.
+    if (document.referrer.includes('/admin-web/admin.html')) {
+      window.location.replace(customerSite);
+    } else {
+      window.location.replace(adminPage);
+    }
   </script>
 </body>
 </html>
